@@ -1,0 +1,16 @@
+{
+  "requests": [
+    {
+      "id": "1761377849957",
+      "studentName": "gourav ",
+      "rollNumber": "24r11a6715",
+      "reason": "fever",
+      "dateTime": "2025-11-10T12:00",
+      "status": "approved",
+      "remarks": "",
+      "createdAt": "2025-10-25T07:37:29.957Z",
+      "approvedAt": "2025-10-25T07:40:54.979Z",
+      "scannedAt": "2025-10-25T07:41:03.645Z"
+    }
+  ]
+}

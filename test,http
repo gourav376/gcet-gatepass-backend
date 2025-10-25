@@ -1,0 +1,40 @@
+### 1. Get all requests
+GET http://localhost:3000/api/requests
+Content-Type: application/json
+
+### 2. Create a new gate pass request (Student)
+POST http://localhost:3000/api/requests
+Content-Type: application/json
+
+{
+  "studentName": "Gourav Vishwakarma",
+  "rollNumber": "21A51A0501",
+  "reason": "Going home for emergency",
+  "dateTime": "2025-10-25 14:30"
+}
+
+### 3. Get only pending requests
+GET http://localhost:3000/api/requests/pending
+Content-Type: application/json
+
+### 4. Approve a request (replace ID)
+PUT http://localhost:3000/api/requests/REQUEST_ID
+Content-Type: application/json
+
+{
+  "status": "approved",
+  "remarks": "Approved for valid reason"
+}
+
+### 5. Reject a request (replace ID)
+PUT http://localhost:3000/api/requests/REQUEST_ID
+Content-Type: application/json
+
+{
+  "status": "rejected",
+  "remarks": "Invalid reason provided"
+}
+
+### 6. Scan an approved pass (replace ID)
+POST http://localhost:3000/api/scan/REQUEST_ID
+Content-Type: application/json
