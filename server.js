@@ -6,7 +6,13 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:5500',  // Local development
+        'https://your-site-name.netlify.app'  // Replace with your actual Netlify URL
+    ],
+    credentials: true
+}));
 app.use(express.json());
 
 const dbPath = path.join(__dirname, 'gatepasses.json');
@@ -161,3 +167,4 @@ app.listen(PORT, () => {
     console.log(`   PUT    /api/requests/:id      - Update request status`);
     console.log(`   POST   /api/scan/:id          - Scan gate pass`);
 });
+
