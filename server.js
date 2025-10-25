@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(cors({
     origin: [
         'http://localhost:5500',  // Local development
-        'https://your-site-name.netlify.app'  // Replace with your actual Netlify URL
+        'https://gcet-gatepassf.netlify.app/'  // Replace with your actual Netlify URL
     ],
     credentials: true
 }));
@@ -167,4 +167,5 @@ app.listen(PORT, () => {
     console.log(`   PUT    /api/requests/:id      - Update request status`);
     console.log(`   POST   /api/scan/:id          - Scan gate pass`);
 });
+
 
